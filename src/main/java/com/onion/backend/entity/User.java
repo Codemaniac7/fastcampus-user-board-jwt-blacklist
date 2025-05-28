@@ -31,6 +31,7 @@ public class User {
     private String password;  // 비밀번호
 
     @Column(nullable = false)
+    @JsonIgnore
     private String email;  // 이메일 (로그인 시 사용할 수 있음)
 
     @Column(nullable = false)
