@@ -1,5 +1,6 @@
 package com.onion.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,6 +26,7 @@ public class User {
     @Column(nullable = false)
     private String username;  // 사용자의 ID (로그인 ID)
 
+    @JsonIgnore
     @Column(nullable = false)
     private String password;  // 비밀번호
 
