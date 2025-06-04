@@ -39,6 +39,9 @@ public class Article {
     @JoinColumn(foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
     private Board board;
 
+    @Column(nullable = false)
+    private boolean isDeleted = false;
+
     @CreatedDate
     @Column(insertable = true)
     private LocalDateTime createdDate;
